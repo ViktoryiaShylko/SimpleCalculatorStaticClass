@@ -27,7 +27,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
+
 #buttons {
   height: 100px;
   display: flex;
@@ -54,4 +56,5 @@
 }
 #result {
   background-color: white;
+  color: red;
 }

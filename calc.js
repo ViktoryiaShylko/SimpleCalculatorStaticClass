@@ -20,5 +20,11 @@ function action() {
       result = num1 / num2;
       break;
   }
-  document.getElementById("result").innerHTML = result;
+   if (num2 === 0){
+    document.getElementById('result').innerHTML = "Can not divide by zero!";
+   }
+   else{
+    document.getElementById("result").innerHTML = result;
+   }
 }
+
