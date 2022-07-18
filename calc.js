@@ -1,6 +1,7 @@
 let option; 
+let btn = document.querySelector('.btn');
 
-function action() {
+btn.addEventListener('click', function action() {
 
   let result;
   let num1 = Number(document.getElementById("num1").value);
@@ -26,5 +27,5 @@ function action() {
    else{
     document.getElementById("result").innerHTML = result;
    }
-}
+});
 
