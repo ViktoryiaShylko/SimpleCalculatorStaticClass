@@ -1,31 +1,41 @@
-let option; 
-let btn = document.querySelector('.btn');
+let op;
 
-btn.addEventListener('click', function action() {
-
-  let result;
-  let num1 = Number(document.getElementById("num1").value);
-  let num2 = Number(document.getElementById("num2").value);
-
-  switch (option) {
-    case '+':
-      result = num1 + num2;
-      break;
-    case '-':
-      result = num1 - num2;
-      break;
-    case '*':
-      result = num1 * num2;
-      break;
-    case '/':
-      result = num1 / num2;
-      break;
+class Calculator {
+  static plus(num1, num2) {
+      return num1 + num2;
   }
-   if (num2 === 0){
-    document.getElementById('result').innerHTML = "Can not divide by zero!";
-   }
-   else{
+  static minus(num1, num2) {
+      return num1 - num2;
+  }
+  static mult(num1, num2) {
+      return num1 * num2;
+  }
+  static divide(num1, num2) {
+    if (num2 === 0) {
+        alert('На ноль делить нельзя!');
+    }
+    return num1 / num2;
+  }
+}
+
+function func() {
+let num1 = Number(document.querySelector('#num1').value);
+let num2 = Number(document.querySelector('#num2').value);
+
+switch (op) {
+      case '+':
+        result = Calculator.plus(num1, num2);
+        break;
+      case '-':
+        result = Calculator.minus(num1, num2);
+        break;
+      case '*':
+        result = Calculator.mult(num1, num2);
+        break;
+      case '/':
+        result = Calculator.divide(num1, num2);
+        break;
+    }
     document.getElementById("result").innerHTML = result;
-   }
-});
+}
 
